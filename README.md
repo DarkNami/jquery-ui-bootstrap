@@ -1,9 +1,10 @@
 # jquery-ui-bootstrap
 Bootstrap style jQuery UI theme
 
-Bootstrap 風格的 jQuery UI theme, 以 jQuery UI v1.11 對應 Bootstrap v3.3
+Bootstrap 風格的 jQuery UI theme
 
-A Bootstrap style jQuery UI theme, base on jQuery UI v1.11 & Bootstrap v3.3
+folder 1.11.4: jQuery 2.2.4 + jQuery UI v1.11.4 for Bootstrap v3.3.4
+folder 1.12.0: jQuery 3.1.0 + jQuery UI v1.12.0 for Bootstrap v3.3.7
 
 ## 介紹
 
