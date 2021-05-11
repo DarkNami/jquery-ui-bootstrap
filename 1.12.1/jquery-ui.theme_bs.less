@@ -1,0 +1,293 @@
+// out: jquery-ui.theme_bs.min.css, compress: true
+@import "jquery-ui.theme.less";
+/*!
+ * jQuery UI CSS Framework 1.20.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+
+/*
+ * Bootstrap Style Theme
+ */
+
+@text-color: #333;
+@border-color: #CCC;
+@border-color-bg: #CCC;
+@border-color-hover: #666;
+@radius: 5px;
+
+.ui-widget-content {
+	border-color: @border-color;
+	background-color: #FFF;
+}
+
+.ui-state {
+	&-default {
+		&, .ui-widget-content &, .ui-widget-header & {
+			border: 1px solid @border-color;
+		}
+	}
+	&-highlight {
+		&, .ui-widget-content &, .ui-widget-header & {
+			border: 1px solid #faebcc;
+			background: #fcf8e3 none;
+			color: #8a6d3b;
+			a {
+				color: #66512c;
+				font-weight: 700;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&-error {
+		&, .ui-widget-content &, .ui-widget-header & {
+			border: 1px solid #ebccd1;
+			background: #f2dede none;
+			color: #a94442;
+			a {
+				color: #843534;
+				font-weight: 700;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+/* Corner radius */
+.ui-corner {
+	&-all, &-top, &-left, &-tl {
+		border-top-left-radius: @radius;
+	}
+	&-all, &-top, &-right, &-tr {
+		border-top-right-radius: @radius;
+	}
+	&-all, &-bottom, &-left, &-bl {
+		border-bottom-left-radius: @radius;
+	}
+	&-all, &-bottom, &-right, &-br {
+		border-bottom-right-radius: @radius;
+	}
+}
+
+/* Overlays */
+.ui-widget {
+	&-overlay {
+		opacity: .5;
+		filter: Alpha(Opacity=50); /* support: IE8 */
+	}
+	&-shadow {
+		margin: -8px 0 0 -8px;
+		padding: 8px;
+		border-radius: 8px;
+	}
+}
+
+/* Each Widget */
+
+div.ui-accordion {
+	.ui-accordion-header-active {
+		border-bottom: none;
+		& + .ui-accordion-content {
+			border-color: @border-color-hover;
+		}
+	}
+	.ui-state {
+		&-active {
+			&, .ui-widget-content &, .ui-widget-header & {
+				color: @text-color;
+				border: 1px solid @border-color-hover;
+				background-color: #E0E0E0;
+			}
+		}
+	}
+}
+
+.ui-button {
+	&-text-only {
+		.ui-button-text {
+			font-size: 1em;
+			font-weight: normal;
+			line-height: normal;
+			padding: 0.5em 1em;
+		}
+	}
+	&.ui-state {
+		&-default {
+			background-image: none;
+			color: @text-color;
+			border: 1px solid @border-color;
+		}
+		&-hover {
+			background-image: none;
+		}
+		&-focus {
+			background-image: none;
+		}
+		&-active {
+			background-image: none;
+		}
+		&-highlight {
+			background-image: none;
+			color: #ffffff;
+			background-color: #f0ad4e;
+		}
+		&-error {
+			background-image: none;
+			color: #ffffff;
+			background-color: #d9534f;
+		}
+	}
+}
+
+div.ui-buttonset {
+	.ui-button {
+		margin-right: -5px;
+	}
+}
+
+div.ui-tabs {
+	border: none;
+	.ui-tabs-nav {
+		background: transparent none;
+		border: none;
+		border-bottom: 1px solid @border-color;
+		li {
+			overflow: hidden;
+			border: 1px solid transparent;
+			&.ui-tabs-active {
+				background-color: transparent;
+				border: 1px solid @border-color;
+			    border-bottom-color: #FFF;
+				a { color: @text-color; }
+			}
+		}
+		.ui-tabs-anchor {
+		    padding: 0.7em 1.1em;
+		    text-decoration: none;
+			color: #337ab7;
+			font-weight: normal;
+		}
+		.ui-state-active.ui-state-hover {
+			background-color: #FFF;
+		}
+	}
+}
+
+div.ui-dialog {
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	.ui-dialog-titlebar {
+		background: transparent none;
+		border-radius: 0;
+		border: medium none;
+		border-bottom: 1px solid @border-color;
+		.ui-dialog-title {
+			color: #404040;
+			font-size: 1.5em;
+			line-height: 1.5;
+		}
+		.ui-button {
+			border: medium none;
+		}
+	}
+	.ui-dialog-content {
+		padding-top: 10px;
+	}
+	.ui-dialog-buttonpane {
+		background-color: #f5f5f5;
+		padding: .3em 1em .3em .4em;
+		.ui-button:first-child {
+			background-color: #337ab7;
+			border-color: #337ab7;
+			color: #ffffff;
+		}
+	}
+}
+
+.ui-icon {
+	.ui-state-default & {
+		opacity: 0.5;
+		filter:Alpha(Opacity=30); /* support: IE8 */
+	}
+	.ui-state-hover &, .ui-state-focus & {
+		opacity: 1.0;
+		filter:Alpha(Opacity=100); /* support: IE8 */
+	}
+	.ui-state-active & {
+		opacity: 1.0;
+		filter:Alpha(Opacity=100); /* support: IE8 */
+	}
+}
+
+div.ui-slider {
+	.ui-state-default {
+		&, .ui-widget-content &, .ui-widget-header & {
+			border: 1px solid @border-color;
+		}
+	}
+}
+
+div.ui-datepicker {
+	.ui-datepicker-header {
+		border: none;
+		color: @text-color;
+		background: #f5f5f5 none;
+	}
+	.ui-state-default {
+		border: none;
+		border-radius: @radius;
+		padding: 5px;
+		text-align: center;
+		font-weight: normal;
+	}
+	.ui-state-highlight {
+		color: #FFF;
+		background-color: #5BC0DE;
+	}
+	.ui-state-hover, .ui-state-focus {
+		color: #FFF;
+		background-color: #3276B1;
+	}
+	.ui-datepicker-prev, .ui-datepicker-next {
+		border: 1px solid transparent;
+		&-hover {
+			background-color: #E0E0E0;
+		}
+	}
+	.ui-datepicker-prev {
+		top: 1px;
+		left: 1px;
+	}
+	.ui-datepicker-next {
+		top: 1px;
+		right: 1px;
+	}
+}
+
+div.ui-selectmenu-menu, ul.ui-menu {
+	.ui-menu-item {
+		border: none;
+		padding: 8px;
+	}
+	.ui-state-focus, .ui-state-active {
+		margin: 0;
+		border: none;
+		font-weight: normal;
+	}
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked {
+	&, &:hover {
+		.ui-icon {
+			box-sizing: content-box;
+		}
+	}
+}
