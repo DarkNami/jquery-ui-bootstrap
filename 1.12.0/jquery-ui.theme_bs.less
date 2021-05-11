@@ -21,11 +21,6 @@
 @border-color-hover: #666;
 @radius: 5px;
 
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 13px;
-}
-
 .ui-widget-content {
 	border-color: @border-color;
 	background-color: #FFF;
@@ -34,22 +29,7 @@ body {
 .ui-state {
 	&-default {
 		&, .ui-widget-content &, .ui-widget-header & {
-			color: @text-color;
 			border: 1px solid @border-color;
-		}
-	}
-	&-hover, &-focus {
-		&, .ui-widget-content &, .ui-widget-header & {
-			color: @text-color;
-			background-image: none;
-			background-color: #E0E0E0;
-		}
-	}
-	&-active {
-		&, .ui-widget-content &, .ui-widget-header & {
-			color: @text-color;
-			border: 1px solid @border-color-hover;
-			background-color: #E0E0E0;
 		}
 	}
 	&-highlight {
@@ -120,12 +100,21 @@ div.ui-accordion {
 			border-color: @border-color-hover;
 		}
 	}
+	.ui-state {
+		&-active {
+			&, .ui-widget-content &, .ui-widget-header & {
+				color: @text-color;
+				border: 1px solid @border-color-hover;
+				background-color: #E0E0E0;
+			}
+		}
+	}
 }
 
 .ui-button {
 	&-text-only {
 		.ui-button-text {
-			font-size: 13px;
+			font-size: 1em;
 			font-weight: normal;
 			line-height: normal;
 			padding: 0.5em 1em;
@@ -202,7 +191,7 @@ div.ui-dialog {
 		border-bottom: 1px solid @border-color;
 		.ui-dialog-title {
 			color: #404040;
-			font-size: 18px;
+			font-size: 1.5em;
 			line-height: 1.5;
 		}
 		.ui-button {
@@ -214,6 +203,7 @@ div.ui-dialog {
 	}
 	.ui-dialog-buttonpane {
 		background-color: #f5f5f5;
+		padding: .3em 1em .3em .4em;
 		.ui-button:first-child {
 			background-color: #337ab7;
 			border-color: #337ab7;
@@ -291,5 +281,13 @@ div.ui-selectmenu-menu, ul.ui-menu {
 		margin: 0;
 		border: none;
 		font-weight: normal;
+	}
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked {
+	&, &:hover {
+		.ui-icon {
+			box-sizing: content-box;
+		}
 	}
 }
