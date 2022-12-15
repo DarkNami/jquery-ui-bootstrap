@@ -1,0 +1,27 @@
+{
+	"extends": "stylelint-config-standard",
+	"customSyntax": "postcss-less",
+	"rules": {
+		"indentation": "tab",
+		"no-missing-end-of-source-newline": null,
+		"color-no-invalid-hex": true,
+		"selector-list-comma-newline-after": null,
+		"no-descending-specificity": null,
+		"rule-empty-line-before": null,
+		"selector-class-pattern": null,
+		"color-hex-case": "upper",
+		"alpha-value-notation": "number",
+		"number-leading-zero": "always",
+		"custom-property-empty-line-before": null,
+		"block-closing-brace-empty-line-before": null,
+		"import-notation": null,
+		"selector-list-comma-newline-before": "always-multi-line",
+		"selector-list-comma-space-before": null,
+		"color-function-notation": "legacy",
+		"block-no-empty": null,
+		"font-family-name-quotes": "always-unless-keyword",
+		"declaration-empty-line-before": null,
+		"at-rule-empty-line-before": null,
+		"comment-empty-line-before": null
+	}
+}
