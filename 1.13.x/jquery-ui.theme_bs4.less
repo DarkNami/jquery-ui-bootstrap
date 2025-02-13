@@ -34,11 +34,11 @@
 	}
 	&-highlight {
 		&, .ui-widget-content &, .ui-widget-header & {
-			border: 1px solid #FAEBCC;
-			background: #FCF8E3 none;
-			color: #8A6D3B;
+			border: 1px solid #faebcc;
+			background: #fcf8e3 none;
+			color: #8a6d3b;
 			a {
-				color: #66512C;
+				color: #66512c;
 				font-weight: 700;
 				&:hover {
 					text-decoration: underline;
@@ -48,9 +48,9 @@
 	}
 	&-error {
 		&, .ui-widget-content &, .ui-widget-header & {
-			border: 1px solid #EBCCD1;
-			background: #F2DEDE none;
-			color: #A94442;
+			border: 1px solid #ebccd1;
+			background: #f2dede none;
+			color: #a94442;
 			a {
 				color: #843534;
 				font-weight: 700;
@@ -81,7 +81,7 @@
 /* Overlays */
 .ui-widget {
 	&-overlay {
-		opacity: 0.5;
+		opacity: .5;
 	}
 	&-shadow {
 		margin: -8px 0 0 -8px;
@@ -136,13 +136,13 @@ div.ui-accordion {
 		}
 		&-highlight {
 			background-image: none;
-			color: #FFF;
-			background-color: #F0AD4E;
+			color: #ffffff;
+			background-color: #f0ad4e;
 		}
 		&-error {
 			background-image: none;
-			color: #FFF;
-			background-color: #D9534F;
+			color: #ffffff;
+			background-color: #d9534f;
 		}
 	}
 }
@@ -165,14 +165,14 @@ div.ui-tabs {
 			&.ui-tabs-active {
 				background-color: transparent;
 				border: 1px solid @border-color;
-				border-bottom-color: #FFF;
+			    border-bottom-color: #FFF;
 				a { color: @text-color; }
 			}
 		}
 		.ui-tabs-anchor {
-			padding: 0.7em 1.1em;
-			text-decoration: none;
-			color: #337AB7;
+		    padding: 0.7em 1.1em;
+		    text-decoration: none;
+			color: #337ab7;
 			font-weight: normal;
 		}
 		.ui-state-active.ui-state-hover {
@@ -201,12 +201,12 @@ div.ui-dialog {
 		padding-top: 10px;
 	}
 	.ui-dialog-buttonpane {
-		background-color: #F5F5F5;
-		padding: 0.3em 1em 0.3em 0.4em;
+		background-color: #f5f5f5;
+		padding: .3em 1em .3em .4em;
 		.ui-button:first-child {
-			background-color: #337AB7;
-			border-color: #337AB7;
-			color: #FFF;
+			background-color: #337ab7;
+			border-color: #337ab7;
+			color: #ffffff;
 		}
 	}
 }
@@ -216,65 +216,76 @@ div.ui-dialog {
 		opacity: 0.5;
 	}
 	.ui-state-hover &, .ui-state-focus & {
-		opacity: 1;
+		opacity: 1.0;
 	}
 	.ui-state-active & {
-		opacity: 1;
+		opacity: 1.0;
 	}
 }
 
 div.ui-slider {
-	.ui-state-default {
-		&, .ui-widget-content &, .ui-widget-header & {
-			border: 1px solid @border-color;
-		}
+	.ui-slider-handle {
+		width: 1.3em;
+		height: 1.3em;
+	}
+	.ui-slider-horizontal .ui-slider-handle {
+		top: -0.35em;
 	}
 }
 
 div.ui-datepicker {
-	table { font-size: 0.9rem; }
-	.ui-datepicker-title select { font-size: 1rem; }
 	.ui-datepicker-header {
-		border: none;
-		color: @text-color;
-		background: #F5F5F5 none;
+		.ui-datepicker-title select { font-size: 1rem; }
+		.ui-datepicker-prev, .ui-datepicker-next {
+			border: 1px solid transparent;
+			&-hover {
+				background-color: #E0E0E0;
+			}
+		}
+		.ui-datepicker-prev {
+			top: 1px;
+			left: 1px;
+		}
+		.ui-datepicker-next {
+			top: 1px;
+			right: 1px;
+		}
 	}
-	.ui-state-default {
-		border: none;
-		border-radius: @radius;
-		padding: 5px;
-		text-align: center;
-		font-weight: normal;
-	}
-	.ui-state-highlight {
-		color: #000;
-		background-color: #BBB;
-		&.ui-state-active {
+	.ui-datepicker-calendar {
+		font-size: 0.95rem;
+		.ui-state-default {
+			border: none;
+			border-radius: @radius;
+			padding: 5px;
+			text-align: center;
+			font-weight: normal;
+		}
+		.ui-state-highlight {
+			color: #000;
+			background-color: #bbb;
+		}
+		.ui-state-active {
 			color: #FFF;
-			background: #007FFF;
+			background: #007fff;
+			font-weight: bold;
 			&.ui-state-hover {
 				color: #FFF;
 				background-color: #5BC0DE;
 			}
 		}
-	}
-	.ui-state-hover, .ui-state-focus {
-		color: #FFF;
-		background-color: #5BC0DE;
-	}
-	.ui-datepicker-prev, .ui-datepicker-next {
-		border: 1px solid transparent;
-		&-hover {
-			background-color: #E0E0E0;
+		.ui-state-hover, .ui-state-focus {
+			color: #FFF;
+			background-color: #5BC0DE;
 		}
 	}
-	.ui-datepicker-prev {
-		top: 1px;
-		left: 1px;
-	}
-	.ui-datepicker-next {
-		top: 1px;
-		right: 1px;
+	.ui-datepicker-buttonpane {
+		button {
+			padding: 4px 8px;
+			opacity: 1;
+		}
+		.ui-state-default {
+			color: #000;
+		}
 	}
 }
 
